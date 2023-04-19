@@ -1,25 +1,33 @@
+import java.util.Scanner;
+
 public class MultidimensionArr {
   
   public static void main(String[] args) {
-   
-    int arr1 [][] = new int[3][4];
+    
 
+    Scanner sc = new Scanner(System.in);
 
-    for (int i = 0; i < 3; i++) {
-      for (int j = 0; j < 4; j++) {
-        
-        arr1[i][j] =(int)(Math.random() * 100);
-      }
-     
+    System.out.println("create multidimension array");
+    System.out.println("Enter the number of height");
+    int row = sc.nextInt();
+    System.out.println("enter the number of width");
+    int column = sc.nextInt();
+    System.out.println("--------------------------------------------------------");
+
+    int MultidimensionArr[][] = new int[row][column];
+
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
+          if(j%2 == 0 && i % 2 == 0) {
+            System.out.print("[x]"); 
+          } else{
+           System.out.print("[0]"); 
+          }
+          
+        }
+        System.out.println(" ");
     }
     
-    for (int i = 0; i < 3; i++) {
-      for (int j = 0; j < 4; j++) {
-        
-        System.out.print(arr1[i][j] +" ");
-      }
-      System.out.println(" ");
-    }
-
+ 
   }
 }
