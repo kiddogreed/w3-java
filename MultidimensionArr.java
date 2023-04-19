@@ -15,7 +15,14 @@ public class MultidimensionArr {
     System.out.println("--------------------------------------------------------");
 
     int MultidimensionArr[][] = new int[row][column];
+//assign value for array
+    for (int i = 0; i < row; i++) {
+      for (int j = 0; j < column; j++) {
+        MultidimensionArr[i][j] = (int) (Math.random()* 100);
+      }
+  }
 
+// display the array 
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
           if(j%2 == 0 && i % 2 == 0) {
@@ -23,7 +30,6 @@ public class MultidimensionArr {
           } else{
            System.out.print("[0]"); 
           }
-          
         }
         System.out.println(" ");
     }
